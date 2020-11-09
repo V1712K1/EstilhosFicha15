@@ -6,14 +6,194 @@
     <title>Index</title>
 </head>
 <body>
-    <button class="botao"></button>   
+    <button class="botao" id="animation1">Ficha15</button>
+    <button class="botao" id="animation2">Ficha15</button> 
+    <button class="botao" id="animation3">Ficha15</button>  
+    <button class="botao" id="animation4">Ficha15</button>
+    <button class="botao" id="animation5"><span id="animation5-span">Ficha15</span></button>
     <style>
         .botao{
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 80px;
             margin: 20px;
-            background-color: blueviolet;
+            background-color: transparent;
+            border: none;
+            color: red;
+            cursor: pointer;
         }
+
+        /* animação fade */
+        #animation1{
+            border: 3px solid red;
+            transition-duration: 200ms;
+        }
+
+        #animation1:hover{
+            background-color: red;
+            color: white;
+        }
+
+        /* animação linhas */
+        #animation2{
+            position: relative;
+        }
+
+        /* o before criou a linha superior */
+        #animation2::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: red;
+
+            transition-duration: 200ms;
+        }
+
+        /* o after criou a linha inferior */
+        #animation2::after{
+            position: absolute;
+            content: '';
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 3px;
+            background-color: red;
+
+            transition-duration: 200ms;
+        }
+
+        /* ao passar o cursor no botao este cria a tal animação */
+        #animation2:hover::before,
+        #animation2:hover::after{
+            width: 100%;
+        }
+
+        /* animação slide */
+        #animation3{
+            position: relative;
+                        
+            transition-duration: 200ms;
+        }
+
+        /* z-index faz com que o texto não desapareça por baixo do fundo */
+        #animation3::after{
+            position: absolute;
+            content: '';
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 0;
+            background-color: red;
+            z-index: -1;
+
+            
+            transition-duration: 200ms;
+        }
+
+        #animation3:hover{
+            color: white;
+        }
+        #animation3:hover::after{
+            height: 100%;
+        }
+
+        #animation4{
+            position: relative;
+            transition-duration: 200ms;
+        }
+
+        #animation4::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            background-color: red;
+            z-index: -1;
+            transition:200ms;
+
+        }
+
+        #animation4::after{
+            position: absolute;
+            content: '';
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            background-color: red;
+            z-index: -1;
+            transition:200ms;
+        }
+
+        #animation4:hover{
+            color: white;
+        }
+
+        #animation4:hover::before,
+        #animation:hover::after{
+            width: 100%;
+            height: 100%;
+        }
+
+
+        #animation5{
+            position: relative;
+        }
+
+        #animation5::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: red;
+
+            transition-duration: 200ms;
+        }
+
+        /* ao por o transition-delay a linha debaixo entra dps de 200ms após a linha superior */
+        #animation5::after{
+            position: absolute;
+            content: '';
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 3px;
+            background-color: red;
+
+            transition-delay: 200ms;
+            transition-duration: 200ms;
+        }
+
+        #animation5-span::after{
+            position: absolute;
+            content:'';
+            top: 0;
+            right: 0;
+            width: 3px;
+            height: 0;
+            background-color: red;
+
+            transition-delay: 200ms;
+            transition-duration: 200ms;
+
+        }
+
+        #animation5-span:hover::before,
+        #animation5-span:hover::after{
+            height: 100%;
+        }
+
+        #animation5:hover::before,
+        #animation5:hover::after{
+            width: 100%;
+        }
+
     </style> 
 </body>
 </html>
