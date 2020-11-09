@@ -11,6 +11,7 @@
     <button class="botao" id="animation3">botao3</button>  
     <button class="botao" id="animation4">botao4</button>
     <button class="botao" id="animation5"><span id="animation5-span">botao5</span></button>
+    <button class="botao" id="animation6"><span id="text">botao6</span></button>
     <style>
         .botao{
             width: 150px;
@@ -178,7 +179,6 @@
             width: 3px;
             height: 0;
             background-color: red;
-
             transition-delay: 200ms;
             transition-duration: 200ms;
 
@@ -192,6 +192,52 @@
         #animation5:hover::before,
         #animation5:hover::after{
             width: 100%;
+        }
+
+        #animation6{
+            position: relative;
+            border: 2px solid red;
+            transition-duration: 0.4s;
+        }
+
+        #animation6::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: transparent transparent red transparent;
+            transition-duration: 0.4s;
+        }
+
+        #animation6::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: transparent transparent red transparent;
+            transition-duration: 0.4s;
+        }
+
+        #text{
+            transition-duration: 0.4s;
+        }
+
+        #animation6:hover > #text{
+            padding-right: 30px;
+        }
+
+        #animation6:hover::after{
+            border-width: 0 40px 40px 0;
+        }
+
+        #animation6:hover::before{
+            border-width: 0 0 40px 40px;
         }
 
     </style> 
