@@ -12,7 +12,82 @@
     <button class="botao" id="animation4">botao4</button>
     <button class="botao" id="animation5"><span id="animation5-span">botao5</span></button>
     <button class="botao" id="animation6"><span id="text">botao6</span></button>
+    <div class="loader">
+        <div class="barra1"></div>
+        <div class="barra2"></div>
+        <div class="barra3"></div>
+        <div class="barra4"></div>
+        <div class="barra5"></div>
+    </div>
+    <div class="loader2">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    
     <style>
+        .loader{
+            height: 100px;
+            width: 95px;
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .barra1,
+        .barra2,
+        .barra3,
+        .barra4,
+        .barra5{
+            height: 50px;
+            width: 15px;
+            background-color: red;
+            
+            animation: animação 1.5s infinite;
+        }
+
+        @keyframes animação{
+            0%{
+                transform: scaleY(1);
+            }
+            50%{
+                transform: scaleY(2);
+            }
+            100%{
+                transform: scaleY(1);
+            }
+        }
+
+        .barra2{
+            animation-delay: 0.2s;
+        }
+        .barra3{
+            animation-delay: 0.4s;
+        }
+        .barra4{
+            animation-delay: 0.6s;
+        }
+        .barra5{
+            animation-delay: 0.8s;
+        }
+
+        .loader2{
+            height: 112px;
+            width: 112px;
+            margin: 50px;
+            position: relative;
+        }
+
+        .loader2 .box1,
+        .loader2 .box2,
+        .loader2 .box3{
+            display: 48px;
+            position: absolute;
+            box-sizing: border-box;
+            border: 16px solid red;
+        }
+
         .botao{
             width: 150px;
             height: 80px;
