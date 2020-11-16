@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header1">
+        <div class="com-imagem">
+            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, labore placeat ea dignissimos officiis ab aperiam necessitatibus ratione dicta facere distinctio modi laudantium suscipit nihil? Modi non doloremque veniam. Esse?</h2>
+        </div>
+        <div class="sem-imagem">
+            <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, facilis quasi. Animi quasi at voluptatem unde explicabo consequuntur, doloremque laborum deserunt obcaecati laudantium iste harum impedit architecto, ex, ipsum maxime!</h2>
+        </div>
+    </div>
+
+    <style>
+        .header1{
+            position: relative;
+            font-family: sans-serif;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+        
+        .header1 .com-imagem,
+        .header1 .sem-imagem{
+            position: relative;
+            width: 50%;
+            background: #1B335F;
+            overflow: hidden;
+        }
+
+        .header1 .com-imagem{
+            background: url(http://turismo.uma.pt/wp-content/uploads/2018/02/Imagem_UMA-3-1.jpg);
+            background-size: cover;
+        }
+
+        .header1 .com-imagem h2,
+        .header1 .sem-imagem h2{
+            position: absolute;
+            line-height: 100vh;
+            white-space: nowrap;
+            font-size: 12em;
+        }
+
+        .header1 .com-imagem h2{
+            color: transparent;
+            -webkit-text-stroke: 2px;
+            -webkit-text-stroke-color: white;
+            left: 100%;
+            animation: animate-text 60s linear infinite;
+        }
+
+        .header1 .sem-imagem h2{
+            color: white;
+            animation: animate-text 60s linear infinite;
+        }
+
+        @keyframes animate-text{
+            0%{
+                transform:translateX(0);
+            }
+            100%{
+                transform:translateX(-100%)
+            }
+        }
+    </style>
+</body>
+</html>
