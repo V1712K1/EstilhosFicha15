@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card1">
+        <div class="box">
+            <div class="imgBx">
+                <img src="http://3.bp.blogspot.com/-d_8ZBzVSHKU/Tqh82P3YUtI/AAAAAAAAEGE/oGeZj2VSyV8/s320/uncle+sam+by+James+Montgomery+Flagg+1917.jpg" height="100%" width="100%">
+            </div>
+            <div class="content">
+                <h2>Title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident placeat aspernatur ad consequuntur fuga.</p>
+                <a href="#">+INFO</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="https://i.pinimg.com/originals/c5/79/5a/c5795af9f9d0d9ac51e38137e0807ca3.jpg" height="100%" >
+            </div>
+            <div class="content">
+                <h2>Title</h2>
+                <p>Earum asperiores placeat impedit eius autem quo harum fuga dolores necessitatibus. Temporibus, dicta et.</p>
+                <a href="#">+INFO</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="https://i.pinimg.com/736x/4e/07/68/4e0768534b0a21b981b0258b58871594--beautiful-sunset-beautiful-places.jpg" height="100%" width="100%">
+            </div>
+            <div class="content">
+                <h2>Title</h2>
+                <p>Nulla vero architecto labore voluptates ad! Commodi soluta quod sequi sapiente totam, facere est.</p>
+                <a href="#">+INFO</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="https://www.bing.com/images/blob?bcid=RGE9uVvFmAsCGg" height="100%" width="110%">
+            </div>
+            <div class="content">
+                <h2>Title</h2>
+                <p>Numquam sequi quae nulla aliquid vitae debitis? Amet eos deleniti nulla ratione quis quibusdam?</p>
+                <a href="#">+INFO</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card2">
+        <div class="box2">
+            <div class="face face1">
+                <div class="content">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A neque beatae nisi maiores quis?</p>
+                </div>
+            </div>
+            <div class="face face2">
+                <h2>01</h2>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="face face1">
+                <div class="content">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A neque beatae nisi maiores quis?</p>
+                </div>
+            </div>
+            <div class="face face2">
+                <h2>02</h2>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="face face1">
+                <div class="content">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A neque beatae nisi maiores quis?</p>
+                </div>
+            </div>
+            <div class="face face2">
+                <h2>03</h2>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="face face1">
+                <div class="content">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A neque beatae nisi maiores quis?</p>
+                </div>
+            </div>
+            <div class="face face2">
+                <h2>04</h2>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .card1{
+            position: relative;
+            width: 1200px;
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            font-family: consolas;
+        }
+
+        .card1 .box{
+            position: relative;
+            width: 280px;
+            height: 400px;
+            margin: 20px 0;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 15px black;
+            overflow: hidden;
+        }
+
+        .card1 .box .imgBx{ 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            clip-path: circle(400px at center 100px);
+            transition: 0.5s;
+            transition-delay: 0.5s;
+        }
+
+        .card1 .box:hover .imgBx{
+            clip-path: circle(80px at center 100px);
+            transition-delay: 0s;
+        }
+
+        .card1 .box .content{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 55%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .card1 .box .content h2{
+            margin: 0;
+            padding: 0;
+        }
+
+        .card1 .box .content a{
+            text-decoration: none;
+            background: black;
+            color: white;
+            padding: 5px;
+            display: inline-block;
+        }
+
+        .card1 .box .imgBx img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card1 .box .content h2,
+        .card1 .box .content p,
+        .card1 .box .content a{
+            opacity: 0;
+            transition: 0.5s;
+            transform: translateY(20px)
+        }
+
+        .card1 .box:hover .content h2{
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.5s;
+        }
+
+        .card1 .box:hover .content p{
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.7s;
+        }
+
+        .card1 .box:hover .content a{
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.9s;
+        }
+
+        .card2{
+            width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-gap: 5px;
+            margin: 50px 0;
+            font-family: consolas;
+        }
+
+        .card2 .box2{
+            position: relative;
+            width: 280px;
+            height: 400px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 5px 5px 15px black;
+        }
+
+        .card2 .box2 .face{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card2 .box2 .face.face1{
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .card2 .box2 .face.face1 h2{
+            margin: 0;
+            padding: 0;
+        }
+
+        .card2 .box2 .face.face2{
+            background: #111;
+            transition: 0.5s;
+        }
+
+        .card2 .box2:hover .face.face2{
+            height: 60px;
+        }
+
+        .card2 .box2:nth-child(1) .face.face2{
+            background: linear-gradient(45deg, #3503ad, #f7308c);
+        }
+
+        .card2 .box2:nth-child(2) .face.face2{
+            background: linear-gradient(45deg, #ccff00, #09afff);
+        }
+
+        .card2 .box2:nth-child(3) .face.face2{
+            background: linear-gradient(45deg, #e91e63, #ffeb3b);
+        }
+
+        .card2 .box2:nth-child(4) .face.face2{
+            background: linear-gradient(45deg, #000, #444);
+        }
+
+        .card2 .box2 .face.face2::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(255, 255, 255, .1);
+        }
+
+        .card2 .box2 .face.face2 h2{
+        margin: 0;
+        padding: 0;
+        font-size: 10em;
+        color: white;
+        transition: 0.5s;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+        }  
+
+        .card2 .box2:hover .face.face2 h2{
+            font-size: 2em;
+        }
+
+    </style>
+</body>
+</html>
